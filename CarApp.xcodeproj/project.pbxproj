@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D25E4BF6C2B52F2BDD7ABA0 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */; };
+		CDC78EDE20531C5B00346C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78EDD20531C5B00346C63 /* AppDelegate.swift */; };
+		CDC78EE320531C5B00346C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EE120531C5B00346C63 /* Main.storyboard */; };
+		CDC78EE520531C5B00346C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EE420531C5B00346C63 /* Assets.xcassets */; };
+		CDC78EE820531C5B00346C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EE620531C5B00346C63 /* LaunchScreen.storyboard */; };
+		CDC78EF320531C5B00346C63 /* CarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78EF220531C5B00346C63 /* CarAppTests.swift */; };
+		CDC78EFE2053224800346C63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EFD2053224800346C63 /* README.md */; };
+		CDC78F05205355F700346C63 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F04205355F700346C63 /* SearchViewController.swift */; };
+		CDC78F072053562500346C63 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC78F062053562500346C63 /* Detail.storyboard */; };
+		CDC78F092053563E00346C63 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F082053563E00346C63 /* DetailViewController.swift */; };
+		CDC78F0B2053567B00346C63 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F0A2053567B00346C63 /* APIManager.swift */; };
+		CDC78F0D2053568B00346C63 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F0C2053568B00346C63 /* Utils.swift */; };
+		CDC78F0F205356ED00346C63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F0E205356ED00346C63 /* Constants.swift */; };
+		CDC78F112053584D00346C63 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F102053584D00346C63 /* BaseViewController.swift */; };
+		CDC78F1320535C7C00346C63 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F1220535C7C00346C63 /* LoadingViewController.swift */; };
+		CDC78F1520535CB200346C63 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F1420535CB200346C63 /* NavViewController.swift */; };
+		CDC78F17205360F800346C63 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78F16205360F800346C63 /* SearchTableViewCell.swift */; };
+		E8DA7B8A186D17665D637941 /* Pods_CarAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDC78EEF20531C5B00346C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDC78ED220531C5B00346C63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDC78ED920531C5B00346C63;
+			remoteInfo = CarApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3608C7BEC9B031E355699764 /* Pods-CarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarApp/Pods-CarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EA2CE1BB3E52149BA8A9AE /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDC78EDA20531C5B00346C63 /* CarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC78EDD20531C5B00346C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDC78EE220531C5B00346C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDC78EE420531C5B00346C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDC78EE720531C5B00346C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDC78EE920531C5B00346C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC78EEE20531C5B00346C63 /* CarAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC78EF220531C5B00346C63 /* CarAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAppTests.swift; sourceTree = "<group>"; };
+		CDC78EF420531C5B00346C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC78EFD2053224800346C63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CDC78F04205355F700346C63 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CDC78F062053562500346C63 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		CDC78F082053563E00346C63 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CDC78F0A2053567B00346C63 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CDC78F0C2053568B00346C63 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CDC78F0E205356ED00346C63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CDC78F102053584D00346C63 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CDC78F1220535C7C00346C63 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		CDC78F1420535CB200346C63 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		CDC78F16205360F800346C63 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		D9215D6DD7E65C753ECA6FAB /* Pods-CarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF9094BA984DA65126B47557 /* Pods-CarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarApp/Pods-CarApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDC78ED720531C5B00346C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D25E4BF6C2B52F2BDD7ABA0 /* Pods_CarApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC78EEB20531C5B00346C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DA7B8A186D17665D637941 /* Pods_CarAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C8CE180245D98950CC0DFC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */,
+				45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		987B4F235AB02494CA514F83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3608C7BEC9B031E355699764 /* Pods-CarApp.debug.xcconfig */,
+				FF9094BA984DA65126B47557 /* Pods-CarApp.release.xcconfig */,
+				D9215D6DD7E65C753ECA6FAB /* Pods-CarAppTests.debug.xcconfig */,
+				84EA2CE1BB3E52149BA8A9AE /* Pods-CarAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDC78ED120531C5B00346C63 = {
+			isa = PBXGroup;
+			children = (
+				CDC78EFD2053224800346C63 /* README.md */,
+				CDC78EDC20531C5B00346C63 /* CarApp */,
+				CDC78EF120531C5B00346C63 /* CarAppTests */,
+				CDC78EDB20531C5B00346C63 /* Products */,
+				987B4F235AB02494CA514F83 /* Pods */,
+				3C8CE180245D98950CC0DFC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDC78EDB20531C5B00346C63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78EDA20531C5B00346C63 /* CarApp.app */,
+				CDC78EEE20531C5B00346C63 /* CarAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDC78EDC20531C5B00346C63 /* CarApp */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78EDD20531C5B00346C63 /* AppDelegate.swift */,
+				CDC78F0E205356ED00346C63 /* Constants.swift */,
+				CDC78F102053584D00346C63 /* BaseViewController.swift */,
+				CDC78F02205355AF00346C63 /* Search */,
+				CDC78F00205355AF00346C63 /* Detail */,
+				CDC78F01205355AF00346C63 /* Model */,
+				CDC78F03205355AF00346C63 /* APIManager */,
+				CDC78EFF205355AF00346C63 /* Utils */,
+				CDC78EE420531C5B00346C63 /* Assets.xcassets */,
+				CDC78EE620531C5B00346C63 /* LaunchScreen.storyboard */,
+				CDC78EE920531C5B00346C63 /* Info.plist */,
+			);
+			path = CarApp;
+			sourceTree = "<group>";
+		};
+		CDC78EF120531C5B00346C63 /* CarAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78EF220531C5B00346C63 /* CarAppTests.swift */,
+				CDC78EF420531C5B00346C63 /* Info.plist */,
+			);
+			path = CarAppTests;
+			sourceTree = "<group>";
+		};
+		CDC78EFF205355AF00346C63 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78F0C2053568B00346C63 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CDC78F00205355AF00346C63 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78F062053562500346C63 /* Detail.storyboard */,
+				CDC78F082053563E00346C63 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CDC78F01205355AF00346C63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDC78F02205355AF00346C63 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78EE120531C5B00346C63 /* Main.storyboard */,
+				CDC78F1420535CB200346C63 /* NavViewController.swift */,
+				CDC78F1220535C7C00346C63 /* LoadingViewController.swift */,
+				CDC78F04205355F700346C63 /* SearchViewController.swift */,
+				CDC78F16205360F800346C63 /* SearchTableViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CDC78F03205355AF00346C63 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				CDC78F0A2053567B00346C63 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDC78ED920531C5B00346C63 /* CarApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC78EF720531C5B00346C63 /* Build configuration list for PBXNativeTarget "CarApp" */;
+			buildPhases = (
+				0EC32DC9929060BF986A896D /* [CP] Check Pods Manifest.lock */,
+				CDC78ED620531C5B00346C63 /* Sources */,
+				CDC78ED720531C5B00346C63 /* Frameworks */,
+				CDC78ED820531C5B00346C63 /* Resources */,
+				910338B7EE2C2A9A67455905 /* [CP] Embed Pods Frameworks */,
+				0E2FE43643613E7099E137E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarApp;
+			productName = CarApp;
+			productReference = CDC78EDA20531C5B00346C63 /* CarApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDC78EED20531C5B00346C63 /* CarAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC78EFA20531C5B00346C63 /* Build configuration list for PBXNativeTarget "CarAppTests" */;
+			buildPhases = (
+				48AD76595FD6F0A33BA56A5A /* [CP] Check Pods Manifest.lock */,
+				CDC78EEA20531C5B00346C63 /* Sources */,
+				CDC78EEB20531C5B00346C63 /* Frameworks */,
+				CDC78EEC20531C5B00346C63 /* Resources */,
+				50E295A6FD344E5F13A61237 /* [CP] Embed Pods Frameworks */,
+				F2E8E2883E8FFAEC2C81BC98 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDC78EF020531C5B00346C63 /* PBXTargetDependency */,
+			);
+			name = CarAppTests;
+			productName = CarAppTests;
+			productReference = CDC78EEE20531C5B00346C63 /* CarAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDC78ED220531C5B00346C63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Philip Starner";
+				TargetAttributes = {
+					CDC78ED920531C5B00346C63 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CDC78EED20531C5B00346C63 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CDC78ED920531C5B00346C63;
+					};
+				};
+			};
+			buildConfigurationList = CDC78ED520531C5B00346C63 /* Build configuration list for PBXProject "CarApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDC78ED120531C5B00346C63;
+			productRefGroup = CDC78EDB20531C5B00346C63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDC78ED920531C5B00346C63 /* CarApp */,
+				CDC78EED20531C5B00346C63 /* CarAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDC78ED820531C5B00346C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC78EE820531C5B00346C63 /* LaunchScreen.storyboard in Resources */,
+				CDC78EE520531C5B00346C63 /* Assets.xcassets in Resources */,
+				CDC78EFE2053224800346C63 /* README.md in Resources */,
+				CDC78F072053562500346C63 /* Detail.storyboard in Resources */,
+				CDC78EE320531C5B00346C63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC78EEC20531C5B00346C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E2FE43643613E7099E137E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarApp/Pods-CarApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EC32DC9929060BF986A896D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48AD76595FD6F0A33BA56A5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50E295A6FD344E5F13A61237 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910338B7EE2C2A9A67455905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CarApp/Pods-CarApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarApp/Pods-CarApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E8E2883E8FFAEC2C81BC98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDC78ED620531C5B00346C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC78F0D2053568B00346C63 /* Utils.swift in Sources */,
+				CDC78F0B2053567B00346C63 /* APIManager.swift in Sources */,
+				CDC78F092053563E00346C63 /* DetailViewController.swift in Sources */,
+				CDC78F1320535C7C00346C63 /* LoadingViewController.swift in Sources */,
+				CDC78F1520535CB200346C63 /* NavViewController.swift in Sources */,
+				CDC78F05205355F700346C63 /* SearchViewController.swift in Sources */,
+				CDC78EDE20531C5B00346C63 /* AppDelegate.swift in Sources */,
+				CDC78F112053584D00346C63 /* BaseViewController.swift in Sources */,
+				CDC78F0F205356ED00346C63 /* Constants.swift in Sources */,
+				CDC78F17205360F800346C63 /* SearchTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC78EEA20531C5B00346C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC78EF320531C5B00346C63 /* CarAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDC78EF020531C5B00346C63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDC78ED920531C5B00346C63 /* CarApp */;
+			targetProxy = CDC78EEF20531C5B00346C63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDC78EE120531C5B00346C63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC78EE220531C5B00346C63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDC78EE620531C5B00346C63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC78EE720531C5B00346C63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDC78EF520531C5B00346C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDC78EF620531C5B00346C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDC78EF820531C5B00346C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3608C7BEC9B031E355699764 /* Pods-CarApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7792CGMD;
+				INFOPLIST_FILE = CarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.CarApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDC78EF920531C5B00346C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF9094BA984DA65126B47557 /* Pods-CarApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7792CGMD;
+				INFOPLIST_FILE = CarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.CarApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDC78EFB20531C5B00346C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9215D6DD7E65C753ECA6FAB /* Pods-CarAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7792CGMD;
+				INFOPLIST_FILE = CarAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.CarAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarApp.app/CarApp";
+			};
+			name = Debug;
+		};
+		CDC78EFC20531C5B00346C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84EA2CE1BB3E52149BA8A9AE /* Pods-CarAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T7792CGMD;
+				INFOPLIST_FILE = CarAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.philipstarner.CarAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarApp.app/CarApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDC78ED520531C5B00346C63 /* Build configuration list for PBXProject "CarApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC78EF520531C5B00346C63 /* Debug */,
+				CDC78EF620531C5B00346C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC78EF720531C5B00346C63 /* Build configuration list for PBXNativeTarget "CarApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC78EF820531C5B00346C63 /* Debug */,
+				CDC78EF920531C5B00346C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC78EFA20531C5B00346C63 /* Build configuration list for PBXNativeTarget "CarAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC78EFB20531C5B00346C63 /* Debug */,
+				CDC78EFC20531C5B00346C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDC78ED220531C5B00346C63 /* Project object */;
+}
