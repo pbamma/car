@@ -31,7 +31,6 @@ The app should have the following functionality:
 
 # Data Source
 * https://sandbox.amadeus.com/
-* 8ziGGBD5UYagqCGpPGKAk0tCg7BHpnhg
 
 
 # Review Testing
