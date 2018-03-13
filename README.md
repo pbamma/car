@@ -21,7 +21,7 @@ The app should have the following functionality:
 
 # Architecture
 * MVC-N (Modle-View-Controller-Network)
-* RESTful with Yelp backend
+* RESTful with test backend
 * Capabilities - Maps + CoreLocation
 
 # Requirements
