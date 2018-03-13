@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        initializeLocationIfNeeded()
         return true
     }
 
@@ -39,6 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //simulator friendly
+    func initializeLocationIfNeeded() {
+        if let _ = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let _ = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
+            //do nothing
+        } else {
+            //Fair headquarters 34.012219,-118.494540
+            UserDefaults.standard.set(34.012219, forKey: Constants.USER_DEFAULT_LATITUDE)
+            UserDefaults.standard.set(-118.494540, forKey: Constants.USER_DEFAULT_LONGITUDE)
+        }
     }
 
 }

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1D25E4BF6C2B52F2BDD7ABA0 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */; };
+		CD5A031B205875DF00929554 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A031A205875DF00929554 /* MapKit.framework */; };
+		CD5A03262058794E00929554 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031C2058794C00929554 /* VehicleInfo.swift */; };
+		CD5A03272058794E00929554 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031D2058794C00929554 /* Provider.swift */; };
+		CD5A03282058794E00929554 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031E2058794D00929554 /* Rates.swift */; };
+		CD5A03292058794E00929554 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031F2058794D00929554 /* Location.swift */; };
+		CD5A032A2058794E00929554 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03202058794D00929554 /* Results.swift */; };
+		CD5A032B2058794E00929554 /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03212058794D00929554 /* CarData.swift */; };
+		CD5A032C2058794E00929554 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03222058794D00929554 /* Cars.swift */; };
+		CD5A032D2058794E00929554 /* EstimatedTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03232058794E00929554 /* EstimatedTotal.swift */; };
+		CD5A032E2058794E00929554 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03242058794E00929554 /* Address.swift */; };
+		CD5A032F2058794E00929554 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A03252058794E00929554 /* Price.swift */; };
 		CDC78EDE20531C5B00346C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC78EDD20531C5B00346C63 /* AppDelegate.swift */; };
 		CDC78EE320531C5B00346C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EE120531C5B00346C63 /* Main.storyboard */; };
 		CDC78EE520531C5B00346C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC78EE420531C5B00346C63 /* Assets.xcassets */; };
@@ -42,6 +53,17 @@
 		3608C7BEC9B031E355699764 /* Pods-CarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarApp/Pods-CarApp.debug.xcconfig"; sourceTree = "<group>"; };
 		45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EA2CE1BB3E52149BA8A9AE /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD5A031A205875DF00929554 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CD5A031C2058794C00929554 /* VehicleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
+		CD5A031D2058794C00929554 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		CD5A031E2058794D00929554 /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		CD5A031F2058794D00929554 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CD5A03202058794D00929554 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		CD5A03212058794D00929554 /* CarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
+		CD5A03222058794D00929554 /* Cars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
+		CD5A03232058794E00929554 /* EstimatedTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedTotal.swift; sourceTree = "<group>"; };
+		CD5A03242058794E00929554 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		CD5A03252058794E00929554 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		CDC78EDA20531C5B00346C63 /* CarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC78EDD20531C5B00346C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC78EE220531C5B00346C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5A031B205875DF00929554 /* MapKit.framework in Frameworks */,
 				1D25E4BF6C2B52F2BDD7ABA0 /* Pods_CarApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +112,7 @@
 		3C8CE180245D98950CC0DFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A031A205875DF00929554 /* MapKit.framework */,
 				20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */,
 				45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */,
 			);
@@ -174,6 +198,16 @@
 		CDC78F01205355AF00346C63 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A03212058794D00929554 /* CarData.swift */,
+				CD5A03202058794D00929554 /* Results.swift */,
+				CD5A031F2058794D00929554 /* Location.swift */,
+				CD5A031D2058794C00929554 /* Provider.swift */,
+				CD5A03222058794D00929554 /* Cars.swift */,
+				CD5A03242058794E00929554 /* Address.swift */,
+				CD5A031C2058794C00929554 /* VehicleInfo.swift */,
+				CD5A03232058794E00929554 /* EstimatedTotal.swift */,
+				CD5A03252058794E00929554 /* Price.swift */,
+				CD5A031E2058794D00929554 /* Rates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +289,11 @@
 					CDC78ED920531C5B00346C63 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CDC78EED20531C5B00346C63 = {
 						CreatedOnToolsVersion = 9.2;
@@ -416,11 +455,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC78F0D2053568B00346C63 /* Utils.swift in Sources */,
+				CD5A032C2058794E00929554 /* Cars.swift in Sources */,
 				CDC78F0B2053567B00346C63 /* APIManager.swift in Sources */,
 				CDC78F092053563E00346C63 /* DetailViewController.swift in Sources */,
 				CDC78F1320535C7C00346C63 /* LoadingViewController.swift in Sources */,
+				CD5A032E2058794E00929554 /* Address.swift in Sources */,
+				CD5A03272058794E00929554 /* Provider.swift in Sources */,
 				CDC78F1520535CB200346C63 /* NavViewController.swift in Sources */,
+				CD5A03292058794E00929554 /* Location.swift in Sources */,
+				CD5A03282058794E00929554 /* Rates.swift in Sources */,
+				CD5A032B2058794E00929554 /* CarData.swift in Sources */,
 				CDC78F05205355F700346C63 /* SearchViewController.swift in Sources */,
+				CD5A032D2058794E00929554 /* EstimatedTotal.swift in Sources */,
+				CD5A032F2058794E00929554 /* Price.swift in Sources */,
+				CD5A032A2058794E00929554 /* Results.swift in Sources */,
+				CD5A03262058794E00929554 /* VehicleInfo.swift in Sources */,
 				CDC78EDE20531C5B00346C63 /* AppDelegate.swift in Sources */,
 				CDC78F112053584D00346C63 /* BaseViewController.swift in Sources */,
 				CDC78F0F205356ED00346C63 /* Constants.swift in Sources */,

@@ -5,10 +5,10 @@
 The app should have the following functionality:
 
 * Finding a car
-* Based on an address, pickup date, and drop-off date return a list of rentals. This list should be sortable by company, distance, and price (ascending and descending order)
+    * Based on an address, pickup date, and drop-off date return a list of rentals. This list should be sortable by company, distance, and price (ascending and descending order)
 * Upon user selection provide rental details
 * Directions to pickup the rental
-* There should be a call to action showing user's the nearest pickup location and directions on how to get there.
+    * There should be a call to action showing user's the nearest pickup location and directions on how to get there.
 * Make the app look as appealing as possible to use
 
 * **Bonus** - See Bonus points.

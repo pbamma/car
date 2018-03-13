@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailViewController: BaseViewController {
 
+    @IBOutlet weak var showMapButton: UIButton!
+    @IBOutlet weak var hideMapButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    //constraints
+    @IBOutlet weak var constraintMapContainerTop: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

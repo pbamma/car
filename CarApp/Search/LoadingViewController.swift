@@ -9,16 +9,31 @@
 import UIKit
 
 class LoadingViewController: BaseViewController {
-
+    var imageBackgroundView: UIImageView?
+//    var blurContainer: UIView?
+//    var blurContainerEffectView: UIVisualEffectView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupBackground()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setupBackground() {
+        let rect = CGRect(x: 0, y: 0, width: Constants.ScreenSize.SCREEN_WIDTH, height: Constants.ScreenSize.SCREEN_HEIGHT)
+        //add blur to container
+        if self.imageBackgroundView == nil {
+            self.imageBackgroundView = UIImageView(frame: rect)
+            self.imageBackgroundView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.imageBackgroundView?.image = UIImage(named: "background")
+            self.imageBackgroundView?.contentMode = .scaleAspectFill
+            self.imageBackgroundView?.layer.masksToBounds = true
+            self.view.insertSubview(self.imageBackgroundView!, at: 0)
+        }
     }
     
 

@@ -16,7 +16,7 @@ class Constants: NSObject {
     static let COLOR_LIGHT_ORANGE = UIColor(red: 251/255.0, green: 159/255.0, blue: 2/255.0, alpha: 1.0)
     
     // host urls
-    static let Host = "https://pugme.herokuapp.com/bomb"
+    static let Host = "http://api.sandbox.amadeus.com/v1.2/cars/"
     static let APIKey = "8ziGGBD5UYagqCGpPGKAk0tCg7BHpnhg"
     
     //Authorization: Bearer <YOUR API KEY>

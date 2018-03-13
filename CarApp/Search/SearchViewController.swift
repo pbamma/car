@@ -15,7 +15,6 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    
     var isFiltered:Bool = false
     
     override func viewDidLoad() {
@@ -103,7 +102,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 //            }
         
             let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "VehicleDetailsViewController") as! DetailViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
 //            viewController.make = theVehicles[indexPath.item].make
 //            viewController.model = theVehicles[indexPath.item].model
 //            viewController.year = theVehicles[indexPath.item].year
