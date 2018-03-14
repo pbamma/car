@@ -24,6 +24,7 @@ class SearchViewController: BaseViewController {
         
         //no loading screen nav
         self.navigationItem.hidesBackButton = true
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     

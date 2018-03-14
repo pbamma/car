@@ -12,49 +12,11 @@ class NavViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoadingViewController") as! LoadingViewController
-        viewController.title = "Loading..."
-        self.pushViewController(viewController, animated: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        downloadVehicleList()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func downloadVehicleList() {
-//        APIManager.sharedInstance.testRetrieveLocalVehicleList { (vehicleList: VehicleList?, error: NSError?) in
-//            if let vList = vehicleList {
-//                self.vehicleList = vList
-//                self.performSegue(withIdentifier: "sequeShowList", sender: self)
-//            } else {
-//                print("Error getting vehicle list: \(error?.description)")
-//            }
-//        }
-        
-//        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
-//            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: "2018-03-14", dropoff: "2018-03-19", radius: "25") { (data: CarData?, error: Error?) in
-//                self.performSegue(withIdentifier: "sequeShowList", sender: self)
-//            }
-//        }
-    }
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sequeShowList" {
-            // inject search VC with dependency (sort of dependency... we're not doing it via initialization, but it will crash if not injected here.)
-            let viewController = segue.destination as! SearchViewController
-            
-        }
     }
 
 }

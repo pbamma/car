@@ -31,12 +31,12 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="2pW-mh-h0V" kind="show" identifier="sequeShowList" id="W86-vb-lbJ"/>
+                        <segue destination="X92-PH-wwV" kind="relationship" relationship="rootViewController" id="oJe-6G-Jkq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbB-NU-m5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="106"/>
+            <point key="canvasLocation" x="-865" y="8"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="HSo-gd-QY0">
@@ -47,14 +47,14 @@
                         <viewControllerLayoutGuide type="bottom" id="vcH-yu-5cr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gxp-4P-pCr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-Bp-pds">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqJ-X4-tB9">
-                                <rect key="frame" x="0.0" y="184" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="70"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logoNoDot" translatesAutoresizingMaskIntoConstraints="NO" id="YqB-KE-PDe">
                                         <rect key="frame" x="45" y="0.0" width="150" height="70"/>
@@ -113,6 +113,7 @@
                     <navigationItem key="navigationItem" id="LsW-C6-V0K"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="bgView" destination="nAL-Bp-pds" id="LFB-7y-83f"/>
                         <outlet property="constraintFairViewTop" destination="hVy-SI-6Vi" id="hUM-4j-XuG"/>
                         <outlet property="fairView" destination="AqJ-X4-tB9" id="qNs-FL-Tmu"/>
                         <outletCollection property="dots" destination="H5F-4o-hbf" collectionClass="NSMutableArray" id="kvT-0g-DOt"/>
@@ -121,11 +122,12 @@
                         <outletCollection property="dots" destination="19p-df-Fjh" collectionClass="NSMutableArray" id="IeL-mJ-wI3"/>
                         <outletCollection property="dots" destination="sIn-c9-rtG" collectionClass="NSMutableArray" id="g4W-YX-dyp"/>
                         <outletCollection property="dots" destination="xi1-hB-CsI" collectionClass="NSMutableArray" id="aWK-d7-2aF"/>
+                        <segue destination="2pW-mh-h0V" kind="show" identifier="sequeToSearch" customClass="SegueToSearch" customModule="CarApp" id="9l7-GA-Fsn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvD-3C-r51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="-378.26086956521743"/>
+            <point key="canvasLocation" x="126" y="8"/>
         </scene>
         <!--search-->
         <scene sceneID="sfj-Ui-YPQ">
@@ -136,11 +138,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6ed-bO-Mzk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rbc-PU-AzN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sr6-xN-pUj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.36862745099999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,7 +152,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-0m-GXu">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -251,7 +253,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="870" y="106"/>
+            <point key="canvasLocation" x="1094" y="105"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="Z0i-gG-J4Z">

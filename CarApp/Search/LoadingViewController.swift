@@ -9,16 +9,22 @@
 import UIKit
 
 class LoadingViewController: BaseViewController {
-    
     @IBOutlet weak var fairView: UIView!
     @IBOutlet var dots: [UIImageView]!
     var dotIndex = 5
     let impact = UIImpactFeedbackGenerator()
     
+    @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var constraintFairViewTop: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        
+        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
+            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: "2018-03-14", dropoff: "2018-03-19", radius: "25") { (data: CarData?, error: Error?) in
+                //self.performSegue(withIdentifier: "sequeShowList", sender: self)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +36,6 @@ class LoadingViewController: BaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +89,7 @@ class LoadingViewController: BaseViewController {
             UIView.animate(withDuration: duration/1.5, delay: 0.2, options: .curveEaseInOut, animations: {
                 self.view.layoutIfNeeded()
             }) { (completed) in
-                
+                self.performSegue(withIdentifier: "sequeToSearch", sender: self)
             }
         }
         
