@@ -9,31 +9,33 @@
 import UIKit
 
 class LoadingViewController: BaseViewController {
-    var imageBackgroundView: UIImageView?
-//    var blurContainer: UIView?
-//    var blurContainerEffectView: UIVisualEffectView?
     
+    @IBOutlet weak var fairView: UIView!
+    @IBOutlet var dots: [UIImageView]!
+    var dotIndex = 5
+    let impact = UIImpactFeedbackGenerator()
+    
+    @IBOutlet weak var constraintFairViewTop: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.dotIndex = dots.count - 1
+        doDotAnimation()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    private func setupBackground() {
-        let rect = CGRect(x: 0, y: 0, width: Constants.ScreenSize.SCREEN_WIDTH, height: Constants.ScreenSize.SCREEN_HEIGHT)
-        //add blur to container
-        if self.imageBackgroundView == nil {
-            self.imageBackgroundView = UIImageView(frame: rect)
-            self.imageBackgroundView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            self.imageBackgroundView?.image = UIImage(named: "background")
-            self.imageBackgroundView?.contentMode = .scaleAspectFill
-            self.imageBackgroundView?.layer.masksToBounds = true
-            self.view.insertSubview(self.imageBackgroundView!, at: 0)
-        }
     }
     
 
@@ -47,4 +49,44 @@ class LoadingViewController: BaseViewController {
     }
     */
 
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    
+    func doDotAnimation() {
+        dots[dotIndex].alpha = 1
+        impact.impactOccurred()
+        if dotIndex != 0 {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.dots[self.dotIndex].alpha = 0
+            }) { (completed) in
+                self.dotIndex -= 1
+                self.doDotAnimation()
+            }
+        } else {
+            drive(startAngle: 0, endAngle: -90, duration: 1.0)
+        }
+    }
+    
+    func drive(startAngle: CGFloat, endAngle: CGFloat, duration: TimeInterval) {
+        let startRadian = Utils.degreesToRadians(degrees: startAngle)
+        let endRadian = Utils.degreesToRadians(degrees: endAngle)
+        
+        self.fairView.transform = CGAffineTransform(rotationAngle: CGFloat(startRadian))
+        self.constraintFairViewTop.constant = 0
+        UIView.animate(withDuration: duration, delay: 1.5, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+            self.fairView.transform = CGAffineTransform(rotationAngle: CGFloat(endRadian))
+        }) { (completed) in
+            self.constraintFairViewTop.constant = self.view.frame.size.height
+            UIView.animate(withDuration: duration/1.5, delay: 0.2, options: .curveEaseInOut, animations: {
+                self.view.layoutIfNeeded()
+            }) { (completed) in
+                
+            }
+        }
+        
+    }
 }

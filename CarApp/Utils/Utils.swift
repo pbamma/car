@@ -28,6 +28,10 @@ class Utils {
         }
     }
     
+    static func degreesToRadians(degrees: CGFloat) -> CGFloat {
+        return degrees * CGFloat(Double.pi) / 180
+    }
+    
     /// Simple time formatter
     /// :param: time - "1100"
     /// :return: String: "6:00 PM".

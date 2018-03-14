@@ -38,11 +38,11 @@ class NavViewController: UINavigationController {
 //            }
 //        }
         
-        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
-            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: "2018-03-14", dropoff: "2018-03-19", radius: "25") { (data: CarData?, error: Error?) in
-                self.performSegue(withIdentifier: "sequeShowList", sender: self)
-            }
-        }
+//        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
+//            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: "2018-03-14", dropoff: "2018-03-19", radius: "25") { (data: CarData?, error: Error?) in
+//                self.performSegue(withIdentifier: "sequeShowList", sender: self)
+//            }
+//        }
     }
     
     
