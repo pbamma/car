@@ -26,6 +26,9 @@ class Constants: NSObject {
     
     static let USER_DEFAULT_LATITUDE = "USER_DEFAULT_LATITUDE"
     static let USER_DEFAULT_LONGITUDE = "USER_DEFAULT_LONGITUDE"
+    //Fair headquarters 34.012219,-118.494540
+    static let LATITUDE_DEFAULT = 34.012219
+    static let LONGITUDE_DEFAULT = -118.494540
     
     
     //MARK: - device structs

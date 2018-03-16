@@ -10,11 +10,10 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var make: UILabel!
-    
-    @IBOutlet weak var model: UILabel!
-    
-    @IBOutlet weak var information: UILabel!
+    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var agency: UILabel!
+    @IBOutlet weak var estimate: UILabel!
+    @IBOutlet weak var distance: UILabel!
     
     @IBOutlet weak var imageThumb: UIImageView!
     
@@ -31,9 +30,10 @@ class SearchTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        self.make.text = nil
-        self.model.text = nil
-        self.information.text = nil
+        self.type.text = nil
+        self.agency.text = nil
+        self.estimate.text = nil
+        self.distance.text = nil
         self.imageThumb.image = nil
     }
 

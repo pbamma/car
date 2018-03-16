@@ -9,13 +9,16 @@
 import UIKit
 import Alamofire
 import AFNetworking
+import MapKit
 
 class SearchViewController: BaseViewController {
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var isFiltered:Bool = false
+    let locationManager = CLLocationManager()
+    var currentLocation:CLLocationCoordinate2D?
+    
+    var vehicleModels:[VehicleModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +28,22 @@ class SearchViewController: BaseViewController {
         //no loading screen nav
         self.navigationItem.hidesBackButton = true
         self.navigationController?.isNavigationBarHidden = false
+        
+        self.startLocating()
+        
+        //start an early load based on current location
+        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
+            let today = Date()
+            let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)
+
+            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: Utils.yearMonthDay(date: today), dropoff: Utils.yearMonthDay(date: tomorrow!), radius: "25") { (vehicleModels: [VehicleModel]?, error: Error?) in
+                if let vehicleModels = vehicleModels {
+                    self.vehicleModels = vehicleModels
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,13 +62,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let filtVehicles = self.filteredVehicles, isFiltered {
-//            return filtVehicles.count
-//        }
-//        if let vList = self.vehicleList?.vehicles {
-//            return vList.count
-//        }
-        return 2
+        var totalCars = 0
+        if let models = self.vehicleModels {
+            totalCars = models.count
+        }
+        return totalCars
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,21 +75,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SearchTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
-    
         
-//        if let vList = self.vehicleList.vehicles {
-//            var theVehicles:[VehicleListItem]
-//            if(isFiltered) {
-//                theVehicles = self.filteredVehicles!
-//            } else {
-//                theVehicles = vList
-//            }
-//
-//
-            cell.make.text = "test"
-            cell.model.text = "test"
-            cell.information.text = "test"
-//
+
+        cell.type.text = self.vehicleModels![indexPath.item].vehicleInfo?.type
+        cell.agency.text = self.vehicleModels![indexPath.item].provider?.companyName
+        if let amount = self.vehicleModels?[indexPath.item].estimatedTotal?.amount {
+            cell.estimate.text = "$" + amount
+        }
+        cell.distance.text = self.vehicleModels![indexPath.item].distance
+
 //            //get the image
 //
 //            if let thumbURL = URL.init(string: theVehicles[indexPath.item].thumb!) {
@@ -94,24 +103,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let vList = self.vehicleList.vehicles {
-//            var theVehicles:[VehicleListItem]
-//            if(isFiltered) {
-//                theVehicles = self.filteredVehicles!
-//            } else {
-//                theVehicles = vList
-//            }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
-            let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//            viewController.make = theVehicles[indexPath.item].make
-//            viewController.model = theVehicles[indexPath.item].model
-//            viewController.year = theVehicles[indexPath.item].year
-//            viewController.styleID = theVehicles[indexPath.item].styleID
-            
-            self.navigationController?.pushViewController(viewController, animated: true)
-//        }
-        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -150,3 +145,27 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+//MARK: CLLocationManagerDelegate methods
+extension SearchViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        
+        self.currentLocation = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        
+        if let location = location {
+            UserDefaults.standard.set(location.coordinate.latitude, forKey: Constants.USER_DEFAULT_LATITUDE)
+            UserDefaults.standard.set(location.coordinate.longitude, forKey: Constants.USER_DEFAULT_LONGITUDE)
+        }
+    }
+    
+    func startLocating() {
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            //Save Battery!  our location accuracy doesn't have to be all that accurate.
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+}

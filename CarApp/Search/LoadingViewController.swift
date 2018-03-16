@@ -7,24 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LoadingViewController: BaseViewController {
     @IBOutlet weak var fairView: UIView!
     @IBOutlet var dots: [UIImageView]!
     var dotIndex = 5
     let impact = UIImpactFeedbackGenerator()
+    var walkSpeed = 0.55
+    var driveSpeed = 2.3
+    
     
     @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var constraintFairViewTop: NSLayoutConstraint!
+    
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         
-        if let lat = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let long = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
-            APIManager.sharedInstance.getCarSearchCircle(lat: lat, long: long, pickup: "2018-03-14", dropoff: "2018-03-19", radius: "25") { (data: CarData?, error: Error?) in
-                //self.performSegue(withIdentifier: "sequeShowList", sender: self)
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +34,7 @@ class LoadingViewController: BaseViewController {
         
         self.dotIndex = dots.count - 1
         doDotAnimation()
+        playSound()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,14 +67,14 @@ class LoadingViewController: BaseViewController {
         dots[dotIndex].alpha = 1
         impact.impactOccurred()
         if dotIndex != 0 {
-            UIView.animate(withDuration: 0.25, animations: {
+            UIView.animate(withDuration: walkSpeed, animations: {
                 self.dots[self.dotIndex].alpha = 0
             }) { (completed) in
                 self.dotIndex -= 1
                 self.doDotAnimation()
             }
         } else {
-            drive(startAngle: 0, endAngle: -90, duration: 1.0)
+            drive(startAngle: 0, endAngle: -90, duration: driveSpeed)
         }
     }
     
@@ -92,6 +95,28 @@ class LoadingViewController: BaseViewController {
                 self.performSegue(withIdentifier: "sequeToSearch", sender: self)
             }
         }
+    }
+    
+    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "car1", withExtension: "wav") else { return }
         
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }

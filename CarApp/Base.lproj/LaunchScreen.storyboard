@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-ay-KHh">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="184" width="375" height="70"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logoNoDot" translatesAutoresizingMaskIntoConstraints="NO" id="NyG-RK-mAY">
                                         <rect key="frame" x="45" y="0.0" width="150" height="70"/>
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="bSS-iJ-VGe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Af6-Io-Fu3"/>
                             <constraint firstItem="bSS-iJ-VGe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="AmU-5V-aeV"/>
-                            <constraint firstItem="bFA-ay-KHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="CP6-RG-Sd1"/>
+                            <constraint firstItem="bFA-ay-KHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="CP6-RG-Sd1"/>
                             <constraint firstItem="bFA-ay-KHh" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="X9e-sF-31q"/>
                             <constraint firstItem="bSS-iJ-VGe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iIu-bx-1p5"/>
                             <constraint firstItem="bFA-ay-KHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nT4-Wx-x8q"/>

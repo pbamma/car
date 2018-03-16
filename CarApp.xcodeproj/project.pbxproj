@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D25E4BF6C2B52F2BDD7ABA0 /* Pods_CarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20200B2876CDCAA1339CE686 /* Pods_CarApp.framework */; };
 		CD15442D2058C0BC00E8C08E /* SegueToSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15442C2058C0BC00E8C08E /* SegueToSearch.swift */; };
+		CD154436205B17EA00E8C08E /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD154435205B17E900E8C08E /* VehicleModel.swift */; };
+		CD154439205BAB1F00E8C08E /* car1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CD154438205BAB1D00E8C08E /* car1.wav */; };
 		CD5A031B205875DF00929554 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A031A205875DF00929554 /* MapKit.framework */; };
 		CD5A03262058794E00929554 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031C2058794C00929554 /* VehicleInfo.swift */; };
 		CD5A03272058794E00929554 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A031D2058794C00929554 /* Provider.swift */; };
@@ -55,6 +57,8 @@
 		45455F17B5BF680819B13D18 /* Pods_CarAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EA2CE1BB3E52149BA8A9AE /* Pods-CarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarAppTests/Pods-CarAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD15442C2058C0BC00E8C08E /* SegueToSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueToSearch.swift; sourceTree = "<group>"; };
+		CD154435205B17E900E8C08E /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		CD154438205BAB1D00E8C08E /* car1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = car1.wav; sourceTree = "<group>"; };
 		CD5A031A205875DF00929554 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CD5A031C2058794C00929554 /* VehicleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
 		CD5A031D2058794C00929554 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD154437205BAB1D00E8C08E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD154438205BAB1D00E8C08E /* car1.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CDC78ED120531C5B00346C63 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +175,7 @@
 				CDC78F00205355AF00346C63 /* Detail */,
 				CDC78F01205355AF00346C63 /* Model */,
 				CDC78F03205355AF00346C63 /* APIManager */,
+				CD154437205BAB1D00E8C08E /* Resources */,
 				CDC78EFF205355AF00346C63 /* Utils */,
 				CDC78EE420531C5B00346C63 /* Assets.xcassets */,
 				CDC78EE620531C5B00346C63 /* LaunchScreen.storyboard */,
@@ -200,6 +213,7 @@
 		CDC78F01205355AF00346C63 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD154435205B17E900E8C08E /* VehicleModel.swift */,
 				CD5A03212058794D00929554 /* CarData.swift */,
 				CD5A03202058794D00929554 /* Results.swift */,
 				CD5A031F2058794D00929554 /* Location.swift */,
@@ -332,6 +346,7 @@
 				CDC78EE820531C5B00346C63 /* LaunchScreen.storyboard in Resources */,
 				CDC78EE520531C5B00346C63 /* Assets.xcassets in Resources */,
 				CDC78EFE2053224800346C63 /* README.md in Resources */,
+				CD154439205BAB1F00E8C08E /* car1.wav in Resources */,
 				CDC78F072053562500346C63 /* Detail.storyboard in Resources */,
 				CDC78EE320531C5B00346C63 /* Main.storyboard in Resources */,
 			);
@@ -473,6 +488,7 @@
 				CD5A032D2058794E00929554 /* EstimatedTotal.swift in Sources */,
 				CD5A032F2058794E00929554 /* Price.swift in Sources */,
 				CD5A032A2058794E00929554 /* Results.swift in Sources */,
+				CD154436205B17EA00E8C08E /* VehicleModel.swift in Sources */,
 				CD5A03262058794E00929554 /* VehicleInfo.swift in Sources */,
 				CDC78EDE20531C5B00346C63 /* AppDelegate.swift in Sources */,
 				CDC78F112053584D00346C63 /* BaseViewController.swift in Sources */,

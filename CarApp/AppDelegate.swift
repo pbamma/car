@@ -46,9 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let _ = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LATITUDE) as? Double, let _ = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
             //do nothing
         } else {
-            //Fair headquarters 34.012219,-118.494540
-            UserDefaults.standard.set(34.012219, forKey: Constants.USER_DEFAULT_LATITUDE)
-            UserDefaults.standard.set(-118.494540, forKey: Constants.USER_DEFAULT_LONGITUDE)
+            UserDefaults.standard.set(Constants.LATITUDE_DEFAULT, forKey: Constants.USER_DEFAULT_LATITUDE)
+            UserDefaults.standard.set(Constants.LONGITUDE_DEFAULT, forKey: Constants.USER_DEFAULT_LONGITUDE)
         }
     }
 

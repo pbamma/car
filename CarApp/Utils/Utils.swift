@@ -6,6 +6,9 @@
 //  Copyright © 2018 Philip Starner. All rights reserved.
 //
 import UIKit
+import CoreLocation
+
+
 
 class Utils {
     static func prettyJSONStringConversion(dict: [String: Any]) -> String {
@@ -32,32 +35,30 @@ class Utils {
         return degrees * CGFloat(Double.pi) / 180
     }
     
-    /// Simple time formatter
-    /// :param: time - "1100"
-    /// :return: String: "6:00 PM".
-    static func fourDigitHourConverter(time: String?) -> String {
-        guard let time = time, time.count == 4 else {
-            return "XX:XX"
-        }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HHmm"
-        let date = dateFormatter.date(from: time)
-        
-        //let dateAsString = "6:35 PM"
-        dateFormatter.dateFormat = "h:mm a"
-        
-        if let date = date {
-            return dateFormatter.string(from: date)
-        }
-        return "XX:XX"
-    }
-    
-    static func getDayOfWeek()->Int {
-        let todayDate = Date()
+    static func yearMonthDay(date: Date) -> String {
         let formatter  = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-        return calendar.component(Calendar.Component.weekday, from: todayDate)
+        return formatter.string(from: date)
+    }
+    
+    static func getDistance(coordinate1: CLLocation?, coordinate2: CLLocation?) -> String {
+        var retVal = "NA"
+        
+        if let coordinate1 = coordinate1, let coordinate2 = coordinate2 {
+            let distanceInMeters = coordinate1.distance(from: coordinate2)
+            let miles = distanceInMeters * 0.000621371192
+            retVal = "\(Double(round(100*miles)/100)) miles"
+        }
+        
+        return retVal
+    }
+    
+    static func getTypeString(type: String?) -> String {
+        var retVal = "24door"
+        if let type = type {
+            let charSet = CharacterSet.init(charactersIn: "/- ")
+            retVal = String(type.components(separatedBy: charSet).joined()).lowercased()
+        }
+        return retVal
     }
 }
