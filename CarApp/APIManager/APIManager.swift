@@ -22,7 +22,8 @@ class APIManager {
 //    /// :param: pickup, dropoff - picup and dropoff dates.
 //    /// :param: callback: onCompletion 'vehicleModel' data.
     func getCarSearchCircle(lat: Double, long: Double, pickup: String, dropoff: String, radius: String, onCompletion: ((_ vehicleModels: [VehicleModel]?, _ error: Error?) -> Void)?) {
-        let requestString = (Constants.Host + "search-circle" + "?pick_up=\(pickup)" + "&drop_off=\(dropoff)" + "&latitude=\(lat)" + "&longitude=\(long)" + "&radius=\(radius)" + "&rate_plan=DAILY" +  "&apikey=\(Constants.APIKey)")
+        let requestString = (Constants.Host + "search-circle" + "?pick_up=\(pickup)" + "&drop_off=\(dropoff)" + "&latitude=\(lat)" + "&longitude=\(long)" + "&radius=\(radius)" +  "&apikey=\(Constants.APIKey)")
+        print("request: \(requestString)")
         
         Alamofire.request(requestString, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: Constants.headers).responseJSON { (response) in
             
@@ -50,7 +51,19 @@ class APIManager {
                                     let long1 = UserDefaults.standard.value(forKey: Constants.USER_DEFAULT_LONGITUDE) as? Double {
                                     let location1 = CLLocation(latitude: lat1, longitude: long1)
                                     let location2 = CLLocation(latitude: Double(lat2), longitude: Double(long2))
-                                    model.distance = Utils.getDistance(coordinate1: location1, coordinate2: location2)
+                                    let dist = Utils.getDistance(coordinate1: location1, coordinate2: location2)
+                                    model.distance = "\(dist) miles"
+                                    
+                                    //sorting needs
+                                    model.distanceVal = dist
+                                    if let amount = car.estimatedTotal?.amount {
+                                        if let dub = Double(amount) {
+                                            model.price = dub
+                                        }
+                                    }
+                                    if let name = result.provider?.companyName {
+                                        model.companyName = name
+                                    }
                                 }
                                 
                                 model.provider = result.provider
@@ -58,12 +71,13 @@ class APIManager {
                                 model.vehicleInfo = car.vehicleInfo
                                 model.estimatedTotal = car.estimatedTotal
                                 
+                                
+                                
                                 models?.append(model)
                             }
                         }
                     }
                 }
-                
                 
                 //make callback
                 onCompletion!(models, nil)

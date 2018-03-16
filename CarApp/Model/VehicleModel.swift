@@ -25,6 +25,10 @@ public struct VehicleModel {
     public var distance: String?
     public var provider: Provider?
     
+    public var price: Double = 0
+    public var companyName: String = ""
+    public var distanceVal: Double = 0.0
+    
     //vehicle info
     public var vehicleInfo: VehicleInfo?
     public var estimatedTotal: EstimatedTotal?

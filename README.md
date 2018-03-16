@@ -41,7 +41,7 @@ The app should have the following functionality:
 
 # Dev Notes
 * SwiftyJSON is old school.  Could use a Swift4 Codable facelift
-* an image cache management system would be really cool.  SDWebImage is outdated and currently not customized to our special needs.
 * more and better Unit Tests!!!
+* 
 
 

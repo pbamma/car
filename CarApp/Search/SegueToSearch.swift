@@ -20,10 +20,6 @@ class SegueToSearch: UIStoryboardSegue {
             src.navigationController?.view.layer.add(transition, forKey: kCATransition)
             
             src.navigationController?.pushViewController(dst, animated: false)
-
-
         }
-        
-        
     }
 }

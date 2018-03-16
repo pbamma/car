@@ -8,6 +8,7 @@ target 'CarApp' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON', '~> 3.1'
   pod 'AFNetworking', '~> 3.1'
+  pod 'RangeSeekSlider', '~> 1.7'
 
   # Pods for CarApp
 

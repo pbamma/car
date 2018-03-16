@@ -41,13 +41,19 @@ class Utils {
         return formatter.string(from: date)
     }
     
-    static func getDistance(coordinate1: CLLocation?, coordinate2: CLLocation?) -> String {
-        var retVal = "NA"
+    static func monthDay(date: Date) -> String {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "MMM-dd"
+        return formatter.string(from: date)
+    }
+    
+    static func getDistance(coordinate1: CLLocation?, coordinate2: CLLocation?) -> Double {
+        var retVal = 0.0
         
         if let coordinate1 = coordinate1, let coordinate2 = coordinate2 {
             let distanceInMeters = coordinate1.distance(from: coordinate2)
             let miles = distanceInMeters * 0.000621371192
-            retVal = "\(Double(round(100*miles)/100)) miles"
+            retVal = Double(round(100*miles)/100)
         }
         
         return retVal
