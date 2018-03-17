@@ -1,3 +1,5 @@
+[![Watch the video](http://recordit.co/VOUrSjGPt8)](http://recordit.co/VOUrSjGPt8)
+
 # iOS Take Home Excercise
 
 * Create a rental shopping app using Swift for iOS or Java/Kotlin for Android
