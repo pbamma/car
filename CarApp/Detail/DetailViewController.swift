@@ -10,10 +10,11 @@ import UIKit
 import MapKit
 
 class DetailViewController: BaseViewController {
+    @IBOutlet weak var imageThumb: UIImageView!
+    
     @IBOutlet weak var showMapButton: UIButton!
     @IBOutlet weak var hideMapButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-    
     
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var type: UILabel!
@@ -39,6 +40,13 @@ class DetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.populateVehicleData()
+        
+        self.startLocating()
+        
+    }
+    
+    func populateVehicleData() {
         if let vehicleModel = vehicleModel {
             self.category.text = vehicleModel.vehicleInfo?.category
             self.type.text = vehicleModel.vehicleInfo?.type
@@ -53,6 +61,7 @@ class DetailViewController: BaseViewController {
                 self.estimatedCost.text = "-"
             }
             
+            imageThumb.image = UIImage(named: vehicleModel.type)
         }
         
         if let pickup = self.selectedPickupDate {
@@ -62,8 +71,6 @@ class DetailViewController: BaseViewController {
         if let dropoff = self.selectedDropoffDate {
             self.dropoff.text = Utils.monthDay(date: dropoff)
         }
-        
-        self.startLocating()
     }
     
     func startLocating() {

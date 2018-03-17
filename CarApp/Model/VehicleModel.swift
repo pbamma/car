@@ -28,6 +28,7 @@ public struct VehicleModel {
     public var price: Double = 0
     public var companyName: String = ""
     public var distanceVal: Double = 0.0
+    public var type: String = "24door"
     
     //vehicle info
     public var vehicleInfo: VehicleInfo?

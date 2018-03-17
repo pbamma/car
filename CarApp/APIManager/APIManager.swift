@@ -29,7 +29,7 @@ class APIManager {
             
             if let data = response.data {
                 let json =  JSON.init(data: data)
-                print(Utils.prettyJSONStringConversion(data: data))
+                //print(Utils.prettyJSONStringConversion(data: data))
                 let carData = CarData.init(json: json)
                 
                 //build VehicleModels
@@ -64,6 +64,10 @@ class APIManager {
                                     if let name = result.provider?.companyName {
                                         model.companyName = name
                                     }
+                                    
+                                    //type for image lookup
+                                    model.type = Utils.getTypeString(type: car.vehicleInfo?.type)
+                                    
                                 }
                                 
                                 model.provider = result.provider

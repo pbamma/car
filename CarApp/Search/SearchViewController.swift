@@ -235,21 +235,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.estimate.text = "$" + amount
         }
         cell.distance.text = self.vehicleModels![indexPath.item].distance
-
-//            //get the image
-//
-//            if let thumbURL = URL.init(string: theVehicles[indexPath.item].thumb!) {
-//                let thumbRequest = URLRequest.init(url: thumbURL, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
-//
-//                cell.imageThumb.setImageWith(thumbRequest as URLRequest, placeholderImage: UIImage.init(named: ""), success: { (request: URLRequest, response: HTTPURLResponse?, image: UIImage) in
-//
-//                    cell.imageThumb.image = image
-//                    cell.setNeedsLayout()
-//                }) { (request: URLRequest, response: HTTPURLResponse?, error: Error) in
-//                    //do nothing
-//                }
-//            }
-//        }
+        
+        cell.imageThumb.image = UIImage(named: self.vehicleModels![indexPath.item].type)
         
         return cell
     }
